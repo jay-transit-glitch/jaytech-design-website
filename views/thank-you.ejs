@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+
+<main class="container" style="padding: 3rem 1.5rem;">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+        <h1 style="color: var(--primary-green);">Request Received!</h1>
+        <p style="font-size: 1.1rem;">Thanks <strong><%= clientName %></strong>! A confirmation email has been sent to your inbox.</p>
+        <p style="color: var(--slate-light); margin-top: 0.5rem;">Want to fast-track your project? Fill out this quick 2-minute questionnaire so I can prepare tailored initial concepts before our Teams call.</p>
+    </div>
+
+    <div class="form-card">
+        <h2 style="margin-bottom: 1.5rem; text-align: center;">Intial Project Brief</h2>
+
+        <% if (locals.successMsg) { %>
+            <div class="alert-success"><%= successMsg %></div>
+        <% } %>
+
+        <form action="/onboarding" method="POST">
+            <input type="hidden" name="email" value="<%= clientEmail %>">
+            
+            <div class="form-group">
+                <label for="websiteGoals">What are the primary goals for your website? *</label>
+                <select id="websiteGoals" name="websiteGoals" required>
+                    <option value="Get more phone calls / lead submission">Get more phone calls / lead submission</option>
+                    <option value="Modernize outdated brand image">Modernize outdated brand image</option>
+                    <option value="Sell products / accept online payments">Sell products / accept online payments</option>
+                    <option value="Provide business info & hours">Provide basic business info & hours</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="target Audience">Who is your target audience? *</label>
+                <input type="text" id="targetAudience" name="targetAudience" placeholder="e.g. Local homeowners, small business owners...">
+            </div>
+
+            <div class="form-group">
+                <label for="competitorUrls">Inspiration or Competitor Websites (Urls)</label>
+                <textarea id="competitorUrls" name="competitorUrls" rows="2" placeholder="List any websites you like or competitors' sites..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="brandAssets">Do you have a logo and brand color preferences?</label>
+                <select id="brandAssets" name="brandAssets">
+                    <option value="Yes, I have-res logos and defined colors">Yes, I have logos & colors ready</option>
+                    <option value="I have a logo, but open to color/design updates">I have a logo, but open to fresh colors/styling</option>
+                    <option value="No, I need help branding/logo setup">No, I need help with branding/logo assistance</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="launchTimeline">Target Launch Timeline<label>
+                <select id="LaunchTimeline" name="LaunchTimeline">
+                    <option value="ASAP (1-2 weeks)">ASAP (1-2 weeks)</option>
+                    <option value="3-4 weeks">3-4 weeks</option>
+                    <option value="Flexible / Flexible start date">Flexible / Flexible start date</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Submit Brief Details</button>
+        </form>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

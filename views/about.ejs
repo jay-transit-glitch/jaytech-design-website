@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+
+<main class="container" style="padding: 4rem 1.5rem;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
+    <div>
+      <h1 style="margin-bottom: 1rem;">About Me</h1>
+      <p style="font-size: 1.15rem; color: var(--slate-light); margin-bottom: 1.5rem;">
+        Hi! I’m a web developer holding a degree in Information Technology. I combine technical expertise with clean design to build fast, effective, and modern web solutions for growing businesses.
+      </p>
+      <p style="color: var(--slate-light); margin-bottom: 1.5rem;">
+        With a strong foundation in IT, software development, and network infrastructure, I create websites that are not only visually engaging, but also secure, optimized for speed, and structured to deliver results for your business.
+      </p>
+      <a href="/contact" class="btn-primary">Book a Consultation</a>
+    </div>
+
+    <!-- Photo Gallery / Feature Column -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <img 
+        src="/images/IMG_0312.JPG" 
+        alt="Profile Photo" 
+        style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+      >
+      <img 
+        src="/images/IMG_0314.JPG" 
+        alt="Working on Web Projects" 
+        style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+      >
+      <img 
+        src="/images/IMG_0315.JPG" 
+        alt="Profile Photo" 
+        style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+      >
+    </div>
+  </div>
+
+  <!-- Highlights Section -->
+  <section style="background: var(--white); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+    <h2 style="margin-bottom: 1.5rem;">Why Work With Me?</h2>
+    <div class="grid-3">
+      <div>
+        <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">🎓 IT Degree Background</h3>
+        <p style="color: var(--slate-light);">Solid technical foundation ensuring clean code, security best practices, and solid site maintenance.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">⚡ Performance Focused</h3>
+        <p style="color: var(--slate-light);">Sites are built from scratch without unnecessary overhead, leading to faster loading times for visitors.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--primary-green); margin-bottom: 0.5rem;">🤝 Direct Partnership</h3>
+        <p style="color: var(--slate-light);">You deal directly with the developer building your site for clear communication and swift turnarounds.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,68 @@
+<%- include('partials/header') %>
+
+<main class="container" style="padding: 3rem 1.5rem;">
+  <div style="text-align: center;">
+    <h1>Let's Build Your Website</h1>
+    <p style="color: var(--slate-light);">Tell me about your project and pick a date/time for a 30-minute Microsoft Teams consultation call.</p>
+  </div>
+
+  <div class="form-card">
+    <% if (locals.successMsg) { %>
+      <div class="alert-success"><%= successMsg %></div>
+    <% } %>
+
+    <% if (locals.errorMsg) { %>
+      <div style="background: #f8d7da; color: #842029; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+        <%= errorMsg %>
+      </div>
+    <% } %>
+
+    <form action="/contact" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" name="businessName" placeholder="e.g. Empire Roofing">
+      </div>
+
+      <div class="form-group">
+        <label for="projectNeeded">Project Needed *</label>
+        <select id="projectNeeded" name="projectNeeded" required>
+          <option value="Starter Single-Page Site ($150-$250)">Starter Single-Page Site ($150-$250)</option>
+          <option value="Standard Business Site ($350-$500)">Standard Business Site ($350-$500)</option>
+          <option value="Website Redesign ($250-$400)">Website Redesign ($250-$400)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="details">Project Details *</label>
+        <textarea id="details" name="details" rows="4" required placeholder="Describe what goals you want to achieve..."></textarea>
+      </div>
+
+      <h3 style="margin: 1.5rem 0 1rem;">Schedule Microsoft Teams Call</h3>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="meetingDate">Preferred Date *</label>
+          <input type="date" id="meetingDate" name="meetingDate" required>
+        </div>
+        <div class="form-group">
+          <label for="meetingTime">Preferred Time *</label>
+          <input type="time" id="meetingTime" name="meetingTime" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Submit Request</button>
+    </form>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

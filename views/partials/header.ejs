@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Link to your CSS file -->
+   <link rel="icon" type="image/png" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; background: var(--card-bg); border-bottom: 1px solid var(--border-color);">
+  <a href="/" style="font-weight: bold; font-size: 1.35rem; color: var(--text-color); text-decoration: none;">
+    JayTech<span style="color: var(--primary-green);">&Design</span>
+  </a>
+
+  <nav style="display: flex; gap: 1.5rem; align-items: center;">
+    <a href="/" style="color: var(--text-color); text-decoration: none; font-weight: 500;">Home</a>
+    <a href="/about" style="color: var(--text-color); text-decoration: none; font-weight: 500;">About</a>
+    <a href="/services" style="color: var(--text-color); text-decoration: none; font-weight: 500;">Services</a>
+    <a href="/contact" style="color: var(--text-color); text-decoration: none; font-weight: 500;">Contact & Booking</a>
+    
+    <button id="theme-toggle" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer;">
+      🌙 Dark Mode
+    </button>
+  </nav>
+</header>
