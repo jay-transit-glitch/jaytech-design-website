@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Link to your CSS file -->
+   <link rel="icon" type="image/png" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="/" class="brand-logo">
+      JayTech<span style="color: var(--primary-green);">&Design</span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact & Booking</a>
+
+      <button id="theme-toggle" class="theme-btn">
+        🌙 Dark Mode
+      </button>
+    </nav>
+
+    <button class="mobile-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+  <div class="sidebar-header">
+    <a href="/" class="brand-logo">
+      JayTech<span style="color: var(--primary-green);">&Design</span>
+    </a>
+    <button class="close-btn" id="closeSidebar">&times;</button>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/services">Services</a>
+    <a href="/contact">Contact & Booking</a>
+
+    <div style="margin-top: 1rem;">
+      <button id="theme-toggle-mobile" class="theme-btn" style="width: 100%;">
+        🌙 Dark Mode
+      </button>
+    </div>
+  </nav>
+</aside>
